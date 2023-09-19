@@ -74,6 +74,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="src\font\RobotoSerif-Italic-VariableFont_GRAD,opsz,wdth,wght.ttf" />
+    <Content Include="src\font\GemunuLibre-VariableFont_wght.ttf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -83,7 +85,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="adm\" />
-    <Folder Include="src\" />
+    <Folder Include="src\css\" />
+    <Folder Include="src\js\" />
     <Folder Include="utilitarios\" />
   </ItemGroup>
   <PropertyGroup>
