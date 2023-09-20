@@ -15,13 +15,13 @@ namespace RisoOdonto.UI
             lblMessage.Font.Size = 50;
         }
             
-            
+           
             protected void btnEntrar_Click(object sender, EventArgs e)
             {
                 try
                 {
                     //instanciar os objetos DTO BLL
-                    UsuarioDTO usuario = new UsuarioDTO();
+                     usuario = new UsuarioDTO();
                     UsuarioBLL objBLL = new UsuarioBLL();
 
                     //pegar os dados fornecidos pelo usuario

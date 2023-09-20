@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RisoOdonto.BLL
 {
-    public class UsuaroBLL
+    public class UsuarioBLL
     {
     }
 }
