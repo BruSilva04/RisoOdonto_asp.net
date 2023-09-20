@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="agenda\Agenda.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="src\css\style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -110,7 +111,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="adm\" />
-    <Folder Include="src\css\" />
     <Folder Include="src\js\" />
   </ItemGroup>
   <ItemGroup>
