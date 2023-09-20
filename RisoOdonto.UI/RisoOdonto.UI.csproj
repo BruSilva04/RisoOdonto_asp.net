@@ -68,8 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="agenda\Agenda.aspx" />
-    <Content Include="login\Login.aspx" />
-    <Content Include="login\LoginFuncionario.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -87,32 +86,17 @@
     <Compile Include="agenda\DefaultAgenda.Master.designer.cs">
       <DependentUpon>DefaultAgenda.Master</DependentUpon>
     </Compile>
-    <Compile Include="login\DefaultLogin.Master.cs">
-      <DependentUpon>DefaultLogin.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="login\DefaultLogin.Master.designer.cs">
-      <DependentUpon>DefaultLogin.Master</DependentUpon>
-    </Compile>
-    <Compile Include="login\Login.aspx.cs">
+    <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="login\Login.aspx.designer.cs">
+    <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="login\LoginFuncionario.aspx.cs">
-      <DependentUpon>LoginFuncionario.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="login\LoginFuncionario.aspx.designer.cs">
-      <DependentUpon>LoginFuncionario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utilitarios\Limpar.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="login\DefaultLogin.Master" />
     <Content Include="agenda\DefaultAgenda.Master" />
     <None Include="packages.config" />
     <Content Include="src\font\RobotoSerif-Italic-VariableFont_GRAD,opsz,wdth,wght.ttf" />
