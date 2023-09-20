@@ -14,37 +14,36 @@ namespace RisoOdonto.UI
             lblMessage.Text = "SEJA BEM A RISO ODONTO ";
             lblMessage.Font.Size = 50;
         }
-            
-           
-            protected void btnEntrar_Click(object sender, EventArgs e)
+
+        protected void btnEntrar_Click(object sender, EventArgs e)
+        {
+            try
             {
-                try
-                {
-                    //instanciar os objetos DTO BLL
-                    UsuarioDTO  usuario = new UsuarioDTO();
-                    UsuarioBLL objBLL = new UsuarioBLL();
+                //instanciar os objetos DTO BLL
+                UsuarioDTO usuario = new UsuarioDTO();
+                UsuarioBLL objBLL = new UsuarioBLL();
 
-                    //pegar os dados fornecidos pelo usuario
-                    string objEmail = txtEmail.Text;
-                    string objSenha = txtSenha.Text;
+                //pegar os dados fornecidos pelo usuario
+                string objEmail = txtEmail.Text;
+                string objSenha = txtSenha.Text;
 
-                    //chamar o metodo na BLL
-                    usuario = objBLL.AuteticarUsuario(objEmail, objSenha);
+                //chamar o metodo na BLL
+                usuario = objBLL.AuteticarUsuario(objEmail, objSenha);
 
 
-                    //checar o tipo de usuario
-                    if (usuario != null)
-                    {
-
-                        lblMessage.Text = $"Bem Vindo {usuario.Nome}";
-                    }
-
-                }
-                catch (Exception)
+                //checar o tipo de usuario
+                if (usuario != null)
                 {
 
-                    lblMessage.Text = $"Usuario {txtEmail.Text} não cadastrado!!! ";
+                    lblMessage.Text = $"Bem Vindo {usuario.Nome}";
                 }
+
             }
+            catch (Exception)
+            {
+
+                lblMessage.Text = $"Usuario {txtEmail.Text} não cadastrado!!! ";
+            }
+        }
     }
 }
