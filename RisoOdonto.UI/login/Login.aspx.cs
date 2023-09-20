@@ -21,7 +21,7 @@ namespace RisoOdonto.UI
                 try
                 {
                     //instanciar os objetos DTO BLL
-                     usuario = new UsuarioDTO();
+                    UsuarioDTO  usuario = new UsuarioDTO();
                     UsuarioBLL objBLL = new UsuarioBLL();
 
                     //pegar os dados fornecidos pelo usuario
