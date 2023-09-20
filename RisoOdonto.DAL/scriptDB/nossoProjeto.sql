@@ -74,6 +74,8 @@ Nome VARCHAR (50) NOT NULL,
 Valor_Consulta FLOAT(8) NOT NULL
 )
 
+
+
 CREATE TABLE Tratamento
 (
 IdTratamento INTEGER IDENTITY PRIMARY KEY,

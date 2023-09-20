@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="agenda\Agenda.aspx" />
+    <Content Include="Cadastro.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="src\css\style.css" />
     <Content Include="Web.config" />
@@ -86,6 +87,13 @@
     </Compile>
     <Compile Include="agenda\DefaultAgenda.Master.designer.cs">
       <DependentUpon>DefaultAgenda.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro.aspx.cs">
+      <DependentUpon>Cadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastro.aspx.designer.cs">
+      <DependentUpon>Cadastro.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
