@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FuncionarioDTO.cs" />
+    <Compile Include="TipoUsuarioDTO.cs" />
     <Compile Include="UsuarioDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

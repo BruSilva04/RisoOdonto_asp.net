@@ -22,6 +22,6 @@ namespace RisoOdonto.DTO
         public int Cep { get; set; }
         public string Logradouro { get; set; }
         public int Nro { get; set; }
-        public  bool  TpUsuario { get; set; }
+        public string   TpUsuario { get; set; }
     }
 }

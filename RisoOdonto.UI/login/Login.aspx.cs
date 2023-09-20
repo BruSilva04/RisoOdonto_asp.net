@@ -1,4 +1,7 @@
-﻿using System;
+﻿using RisoOdonto.BLL;
+using RisoOdonto.DTO;
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -28,7 +31,7 @@ namespace RisoOdonto.UI
                 string objSenha = txtSenha.Text;
 
                 //chamar o metodo na BLL
-                usuario = objBLL.AuteticarUsuario(objEmail, objSenha);
+                usuario = objBLL.AutenticarPaciente(objEmail, objSenha);
 
 
                 //checar o tipo de usuario

@@ -45,5 +45,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioBLL.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RisoOdonto.DAL\RisoOdonto.DAL.csproj">
+      <Project>{d8d834fa-04b0-47e7-b904-a705918e9930}</Project>
+      <Name>RisoOdonto.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RisoOdonto.DTO\RisoOdonto.DTO.csproj">
+      <Project>{d74d47bf-8b40-4bb4-8735-bf7bd2c9aae1}</Project>
+      <Name>RisoOdonto.DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

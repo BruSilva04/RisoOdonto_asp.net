@@ -46,18 +46,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioDAL.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="scriptDB\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\RisoOdonto.BLL\RisoOdonto.BLL.csproj">
-      <Project>{5d0f8116-381b-4de8-866c-f745c852586c}</Project>
-      <Name>RisoOdonto.BLL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\RisoOdonto.DTO\RisoOdonto.DTO.csproj">
       <Project>{d74d47bf-8b40-4bb4-8735-bf7bd2c9aae1}</Project>
       <Name>RisoOdonto.DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="scriptDB\nossoProjeto.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
