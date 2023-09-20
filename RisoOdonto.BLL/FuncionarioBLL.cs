@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RisoOdonto.DAL
+namespace RisoOdonto.BLL
 {
-    public class Class1
+    internal class FuncionarioBLL
     {
     }
 }
