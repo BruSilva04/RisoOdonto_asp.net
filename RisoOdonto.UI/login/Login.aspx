@@ -10,6 +10,21 @@
 <body>
     <form id="form1" runat="server">
         <div>
+             <ul>
+              <li>
+                  <asp:TextBox ID="txtEmail" placeholder="Email: " MaxLength="150" Width="40%" runat="server"/>
+              </li>
+               <li>
+                  <asp:TextBox ID="txtSenha" placeholder="Senha: " MaxLength="6" Width="40%" runat="server"/>
+              </li>
+              <li>
+                  <asp:Button ID="btnEntrar" runat="server" Text="Entrar" OnClick="btnEntrar_Click" />
+                  <asp:Button ID="btnLimpar" runat="server" Text="Limpar" />
+              </li>
+              <li>
+                  <asp:Label ID="lblMessage" runat="server" Text="Label"></asp:Label>
+              </li>
+          </ul>
         </div>
     </form>
 </body>
