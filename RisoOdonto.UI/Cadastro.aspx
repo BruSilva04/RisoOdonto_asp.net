@@ -15,8 +15,8 @@
 <body>
         <!-- Nav -->
     <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container" style="justify-content:space-between">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+      <div class="container d-flex justify-content-between align-items-center " >
         <a class="navbar-brand" href="#Home">Riso<span class="logo">Odonto</span> </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -31,7 +31,7 @@
     <div class="box">
         <form id="form1" runat="server">
            <fieldset>
-                    <legend><b>Fórmulário de Clientes</b></legend>
+                    <legend><b>Cadastro</b></legend>
                     <br>
                     <div class="inputBox">
                         <input type="text" name="nome" id="nome" class="inputUser" required>
@@ -61,8 +61,8 @@
                     <input type="date" name="data_nascimento" id="data_nascimento" required>
                     <br><br><br>
                     <div class="inputBox">
-                        <input type="text" name="cidade" id="cidade" class="inputUser" required>
-                        <label for="cidade" class="labelInput">Cidade</label>
+                        <input type="text" name="CPF" id="cpf" class="inputUser" required>
+                        <label for="cpf" class="labelInput">CPF</label>
                     </div>
                     <br><br>
                     <div class="inputBox">
@@ -78,25 +78,25 @@
                     <input type="submit" name="submit" id="submit">
                 </fieldset>
         </form>
-    </div>
-        <!-- footer -->
- <%--   <footer>
-      <div class="container-footer">
-      <div class="footer">
-        <h1>RisoOdonto</h1>
-        <p>&copy;2023 RisoOdonto</p>
-        <p>Todos os direitos reservados.</p>
-      </div>
-      <div class="footer-socias">
-        <ul>
-          <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
-          <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-          <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
-        </ul>
-      </div>
-    </div>
-    </footer >--%>
+    </div>                 <!-- footer -->
+     <footer>
+          <div class="container-footer">
+          <div class="footer">
+            <h1>RisoOdonto</h1>
+            <p>&copy;2023 RisoOdonto</p>
+            <p>Todos os direitos reservados.</p>
+          </div>
+          <div class="footer-socias">
+            <ul>
+              <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+              <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+    </footer >
     <!-- endregion -->
+
 
     <%--script--%>
     <!-- bootstrap -->
