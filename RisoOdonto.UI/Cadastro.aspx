@@ -28,85 +28,57 @@
     </nav>
     </header>
     <!-- endregion -->
-    <form id="form1" runat="server">
-        <div>
-            <div class="container-center" style="background-color:#7b37ac88; color:black;">
-                <h1 style="text-align:center; ">Cadastra-se aqui</h1>
-                <div class="container-center" style="display:flex; justify-content:center; flex-direction:row; align-items:center;">
-                <ul >
-                    <li >
-                        <asp:Label ID="txtNome" runat="server" Text="Nome:"></asp:Label>
-                    </li>
-                    <li>
-                        <asp:TextBox ID="TextBox1" runat="server" Placeholder="Nome"></asp:TextBox></li>
-                    <li>
-                        <asp:Label ID="Label2" runat="server" Text="CPF:"></asp:Label>
-                        <li>
-                            <asp:TextBox ID="TextBox2" runat="server" Placeholder="cpf"></asp:TextBox>
-                        </li>
-                        <li>
-                            <asp:Label ID="Label3" runat="server" Text="E-mail:"></asp:Label>
-                        </li>
-                        <li>
-                            <asp:TextBox ID="TextBox3" runat="server" Placeholder="email"></asp:TextBox>
-                        </li>
-                        <li>
-                            <asp:Label ID="Label4" runat="server" Text="Plano de saude:"></asp:Label>
-                        </li>
-                        <li>
-                            <asp:TextBox ID="TextBox4" runat="server" Placeholder="plano de saude"></asp:TextBox>
-                        </li>
-                        <li>
-                            <asp:Label ID="Label9" runat="server" Text="Celular:"></asp:Label>
-                        </li>
-                        <li>
-                            <asp:TextBox ID="TextBox10" runat="server" Placeholder="cel"></asp:TextBox>
-                        </li>
-                        <li>
-                            <asp:Label ID="Label1" runat="server" Text="Cidade:"></asp:Label>
-                        </li>
-                        <li>
-                            <asp:TextBox ID="TextBox5" runat="server" Placeholder="cidade"></asp:TextBox>
-                        </li>
-                        <li>
-                            <asp:Label ID="Label5" runat="server" Text="Bairro:"></asp:Label>
-                        </li>
-                        <li>
-                            <asp:TextBox ID="TextBox6" runat="server" Placeholder="bairro"></asp:TextBox>
-                        </li>
-                        <li>
-                            <asp:Label ID="Label6" runat="server" Text="CEP:"></asp:Label>
-                        </li>
-                        <li>
-                            <asp:TextBox ID="TextBox7" runat="server" Placeholder="cep"></asp:TextBox>
-                        </li>
-                        <li>
-                            <asp:Label ID="Label7" runat="server" Text="Logradouro:"></asp:Label>
-                        </li>
-                        <li>
-                            <asp:TextBox ID="TextBox8" runat="server" Placeholder="logradouro"></asp:TextBox>
-                        </li>
-                        <li>
-                            <asp:Label ID="Label8" runat="server" Text="Numero:"></asp:Label>
-                        </li>
-                        <li>
-                            <asp:TextBox ID="TextBox9" runat="server" Placeholder="nro"></asp:TextBox>
-                        </li>
-                        <li>
-                            <input type="date" name="" id="">
-                        </li>
-
-                        <select name="select">
-                          <option value="valor1">-- Selecione Sexo --</option>
-                          <option value="valor2" >Masculino </option>
-                          <option value="valor3"> Feminino </option>
-                        </select>
-                </ul>
-                    </div>
-            </div>
-        </div>
-    </form>
-
+    <div>
+        <form id="form1" runat="server">
+                  <fieldset>
+                <legend><b>Fórmulário de Clientes</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="labelInput">Nome completo</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="email" id="email" class="inputUser" required>
+                    <label for="email" class="labelInput">Email</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="tel" name="telefone" id="telefone" class="inputUser" required>
+                    <label for="telefone" class="labelInput">Telefone</label>
+                </div>
+                <p>Sexo:</p>
+                <input type="radio" id="feminino" name="genero" value="feminino" required>
+                <label for="feminino">Feminino</label>
+                <br>
+                <input type="radio" id="masculino" name="genero" value="masculino" required>
+                <label for="masculino">Masculino</label>
+                <br>
+                <input type="radio" id="outro" name="genero" value="outro" required>
+                <label for="outro">Outro</label>
+                <br><br>
+                <label for="data_nascimento"><b>Data de Nascimento:</b></label>
+                <input type="date" name="data_nascimento" id="data_nascimento" required>
+                <br><br><br>
+                <div class="inputBox">
+                    <input type="text" name="cidade" id="cidade" class="inputUser" required>
+                    <label for="cidade" class="labelInput">Cidade</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="estado" id="estado" class="inputUser" required>
+                    <label for="estado" class="labelInput">Estado</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="endereco" id="endereco" class="inputUser" required>
+                    <label for="endereco" class="labelInput">Endereço</label>
+                </div>
+                <br><br>
+                <input type="submit" name="submit" id="submit">
+            </fieldset>
+        </form>
+    </div>
         <!-- footer -->
     <footer>
       <div class="container-footer">
