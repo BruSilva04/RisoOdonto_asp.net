@@ -29,86 +29,18 @@
     </header>
     <!-- endregion -->
     <form id="form1" runat="server">
-        <div>
-            <div class="container-center" style="background-color:#7b37ac88; color:black;">
-                <h1 style="text-align:center; ">Cadastra-se aqui</h1>
-                <div class="container-center" style="display:flex; justify-content:center; flex-direction:row; align-items:center;">
-                <ul >
-                    <li >
-                        <asp:Label ID="txtNome" runat="server" Text="Nome:"></asp:Label>
-                    </li>
-                    <li>
-                        <asp:TextBox ID="TextBox1" runat="server" Placeholder="Nome"></asp:TextBox></li>
-                    <li>
-                        <asp:Label ID="Label2" runat="server" Text="CPF:"></asp:Label>
-                        <li>
-                            <asp:TextBox ID="TextBox2" runat="server" Placeholder="cpf"></asp:TextBox>
-                        </li>
-                        <li>
-                            <asp:Label ID="Label3" runat="server" Text="E-mail:"></asp:Label>
-                        </li>
-                        <li>
-                            <asp:TextBox ID="TextBox3" runat="server" Placeholder="email"></asp:TextBox>
-                        </li>
-                        <li>
-                            <asp:Label ID="Label4" runat="server" Text="Plano de saude:"></asp:Label>
-                        </li>
-                        <li>
-                            <asp:TextBox ID="TextBox4" runat="server" Placeholder="plano de saude"></asp:TextBox>
-                        </li>
-                        <li>
-                            <asp:Label ID="Label9" runat="server" Text="Celular:"></asp:Label>
-                        </li>
-                        <li>
-                            <asp:TextBox ID="TextBox10" runat="server" Placeholder="cel"></asp:TextBox>
-                        </li>
-                        <li>
-                            <asp:Label ID="Label1" runat="server" Text="Cidade:"></asp:Label>
-                        </li>
-                        <li>
-                            <asp:TextBox ID="TextBox5" runat="server" Placeholder="cidade"></asp:TextBox>
-                        </li>
-                        <li>
-                            <asp:Label ID="Label5" runat="server" Text="Bairro:"></asp:Label>
-                        </li>
-                        <li>
-                            <asp:TextBox ID="TextBox6" runat="server" Placeholder="bairro"></asp:TextBox>
-                        </li>
-                        <li>
-                            <asp:Label ID="Label6" runat="server" Text="CEP:"></asp:Label>
-                        </li>
-                        <li>
-                            <asp:TextBox ID="TextBox7" runat="server" Placeholder="cep"></asp:TextBox>
-                        </li>
-                        <li>
-                            <asp:Label ID="Label7" runat="server" Text="Logradouro:"></asp:Label>
-                        </li>
-                        <li>
-                            <asp:TextBox ID="TextBox8" runat="server" Placeholder="logradouro"></asp:TextBox>
-                        </li>
-                        <li>
-                            <asp:Label ID="Label8" runat="server" Text="Numero:"></asp:Label>
-                        </li>
-                        <li>
-                            <asp:TextBox ID="TextBox9" runat="server" Placeholder="nro"></asp:TextBox>
-                        </li>
-                        <li>
-                            <input type="date" name="" id="">
-                        </li>
 
-                        <select name="select">
-                          <option value="valor1">-- Selecione Sexo --</option>
-                          <option value="valor2" >Masculino </option>
-                          <option value="valor3"> Feminino </option>
-                        </select>
-                </ul>
-                    </div>
-            </div>
+      <div class="container px-4 container1 mt-3">
+        <div class="input-group">
+          <span class="input-group-text">Digite seu Nome:</span>
+          <input type="text" aria-label="First name" class="form-control">
         </div>
+      </div>
+       
     </form>
 
         <!-- footer -->
-    <footer>
+ <%--   <footer>
       <div class="container-footer">
       <div class="footer">
         <h1>RisoOdonto</h1>
@@ -123,7 +55,7 @@
         </ul>
       </div>
     </div>
-    </footer >
+    </footer >--%>
     <!-- endregion -->
 
     <%--script--%>
