@@ -10,11 +10,16 @@
     font-family: 'Roboto-Light';
     src: url('../font/Roboto-Light.ttf');
 }
+
+html {
+    scroll-behavior: smooth !important;
+    overflow-x: hidden !important;
+}
     
 /* navbar */
 /*#region*/
 
-.navbar{
+.navbar {
     background-color: white !important;
     position: fixed;
     width: 100%;
@@ -83,7 +88,6 @@ fieldset {
 }
 
 legend {
-    border: 1px solid dodgerblue;
     padding: 10px;
     text-align: center;
     background-image: linear-gradient(to right, rgba(130, 56, 228, 0.74), rgb(31, 17, 71));
@@ -148,13 +152,15 @@ legend {
 /*#region*/
 
 .container-footer {
-    position: relative;
-    top: -3rem;
+    position: absolute;
+    top: 57rem;
+    width:100%;
     display: flex;
     justify-content: space-evenly;
     height: 15rem;
     padding-top: 4rem;
     color: rgb(57, 18, 94);
+    background-color: white;
 }
 
 .footer h1 {

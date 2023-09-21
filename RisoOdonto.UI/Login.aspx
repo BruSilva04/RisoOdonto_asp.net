@@ -22,8 +22,8 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent" >      
-            <button class="btn-nav" style=justify-content-center; type="submit">Cadastrar</button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">      
+            <button class="btn-nav"  type="submit">Cadastrar</button>
         </div>
       </div>
     </nav>
@@ -35,7 +35,7 @@
             <div class="box">
         <form id="form1" runat="server">
         <fieldset>
-        <legend><b>Fórmulário de Clientes</b></legend>
+        <legend><b>Login</b></legend>
         <br><br>
         <div class="inputBox">
         <asp:TextBox type="text" name="email" id="txtEmail" class="inputUser" runat="server" required/>
