@@ -70,6 +70,7 @@
     <Content Include="agenda\Agenda.aspx" />
     <Content Include="Cadastro.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="src\css\Cadastro.css" />
     <Content Include="src\css\style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
