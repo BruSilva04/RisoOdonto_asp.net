@@ -1,4 +1,116 @@
-﻿@font-face {
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+@font-face {
     font-family: 'Roboto-Light';
     src: url('../font/Roboto-Light.ttf');
 }
+    
+/* navbar */
+/*#region*/
+
+.navbar{
+    background-color: white !important;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.container > a {
+    font-size: 1.5rem;
+}
+
+.logo {
+    font-family: 'Gemunu Libre', serif;
+    font-weight: 600;
+    color: blueviolet;
+}
+
+.collapse {
+    gap: 2rem;
+}
+
+.btn-nav {
+    border: 1px solid blueviolet;
+    border-radius: 2rem;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: .5rem 3rem;
+    color: blueviolet;
+    transition: all .3s;
+}
+
+    .btn-nav:hover {
+        border: none;
+        color: white;
+        transition: all .3s;
+        background-color: blueviolet;
+    }
+
+.nav-link.active {
+    border-bottom: 2px solid blueviolet;
+}
+/*#endregion*/
+
+/* central region */
+/*#region*/
+
+
+/*.home-container {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4rem;
+}
+
+.home-inner {
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.home-inner {
+    font-size: 2.5rem;
+}
+
+.home-inner {
+    font-size: 0.9rem;
+    width: auto;
+    text-align: center;
+    padding: 0 1rem;
+}*/
+/*#endregion*/
+
+/* footer */
+/*#region*/
+
+.container-footer {
+    position: relative;
+    top: -3rem;
+    display: flex;
+    justify-content: space-evenly;
+    height: 15rem;
+    padding-top: 4rem;
+    color: rgb(57, 18, 94);
+}
+
+.footer h1 {
+    font-weight: 600;
+}
+
+.footer-socias ul {
+    display: flex;
+    gap: 3rem;
+}
+
+.footer-socias i {
+    padding-top: 2rem;
+    color: rgb(57, 18, 94);
+    font-size: 1.5rem;
+}
+/*#endregion*/
+

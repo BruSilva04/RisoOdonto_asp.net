@@ -1,6 +1,5 @@
 ﻿using RisoOdonto.BLL;
 using RisoOdonto.DTO;
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,11 +11,6 @@ namespace RisoOdonto.UI
 {
     public partial class Login : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            lblMessage.Text = "SEJA BEM A RISO ODONTO ";
-            lblMessage.Font.Size = 50;
-        }
 
         protected void btnEntrar_Click(object sender, EventArgs e)
         {
