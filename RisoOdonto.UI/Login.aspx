@@ -22,8 +22,8 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">      
-            <button class="btn-nav" type="submit">Cadastrar</button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" >      
+            <button class="btn-nav" style=justify-content-center; type="submit">Cadastrar</button>
         </div>
       </div>
     </nav>
@@ -31,32 +31,31 @@
     <%--#endregion--%>
 
     <%--central region--%>
-    <form id="form1" runat="server">
-        <div>
-            <div class="container" style="background-color:blueviolet; color:black;" ></div>
-            <h1>Faça o Login</h1>
-             <ul>
-              <li>
-                  <asp:TextBox ID="txtEmail" placeholder="Email: " MaxLength="150" Width="40%" runat="server"/>
-              </li>
-               <li>
-                  <asp:TextBox ID="txtSenha" placeholder="Senha: " MaxLength="6" Width="40%" runat="server"/>
-              </li>
-              <li>
-                  <asp:Button ID="btnEntrar" runat="server" Text="Entrar" OnClick="btnEntrar_Click" />
-                  <asp:Button ID="btnLimpar" runat="server" Text="Limpar" />
-              </li>
-              <li>
-                  <asp:Label ID="lblMessage" runat="server"></asp:Label>
-              </li>
-          </ul>
-        </div>
-    </form>     
-      <!-- endregion -->
-
-    <!-- footer -->
     <%--#region--%>
-    <footer>
+            <div class="box">
+        <form id="form1" runat="server">
+        <fieldset>
+        <legend><b>Fórmulário de Clientes</b></legend>
+        <br><br>
+        <div class="inputBox">
+        <asp:TextBox type="text" name="email" id="txtEmail" class="inputUser" runat="server" required/>
+        <label for="email" class="labelInput">Email</label>
+        </div>
+        <br><br>
+        <div class="inputBox">
+        <asp:TextBox type="text" name="senha" id="txtSenha" class="inputUser" runat="server" required/>
+        <label for="senha" class="labelInput">Senha</label>
+        </div>
+        <br><br>
+        <input type="submit" name="submit" id="submit">
+            <asp:Label ID="lblMessage" runat="server"></asp:Label>
+        </fieldset>
+        </form>
+        </div>     
+      <!-- #endregion -->
+
+ <%--footer--%>
+    <%--#region--%>
       <div class="container-footer">
       <div class="footer">
         <h1>RisoOdonto</h1>
