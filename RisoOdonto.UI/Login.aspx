@@ -47,7 +47,7 @@
         <label for="senha" class="labelInput">Senha</label>
         </div>
         <br><br>
-        <input type="submit" name="submit" id="submit">
+        <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
             <asp:Label ID="lblMessage" runat="server"></asp:Label>
         </fieldset>
         </form>

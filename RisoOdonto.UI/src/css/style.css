@@ -132,7 +132,7 @@ legend {
     font-size: 15px;
 }
 
-#submit {
+#btnLogin {
     background-image: linear-gradient(to right, rgba(130, 56, 228, 0.74), rgb(31, 17, 71));
     width: 100%;
     border: none;
@@ -143,8 +143,8 @@ legend {
     border-radius: 10px;
 }
 
-    #submit:hover {
-    background-image: linear-gradient(to right,rgb(64, 1, 180), rgb(80, 19, 195));
+    #btnLogin:hover {
+        background-image: linear-gradient(to right,rgb(64, 1, 180), rgb(80, 19, 195));
     }
 /*#endregion*/
 
