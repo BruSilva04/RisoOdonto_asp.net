@@ -11,6 +11,9 @@
     text-decoration: none;
 }
 
+body {
+    background-color: #7b37ac88 !important;
+}
 
 
 /* navbar */
@@ -59,7 +62,11 @@
 /*Endregion*/
 
 
-
+.container1 {
+    background-color: blueviolet;
+    width: 450px !important;
+    height: auto;
+}
 
 
 
