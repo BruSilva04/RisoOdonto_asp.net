@@ -51,20 +51,16 @@ namespace RisoOdonto.DAL
             try
             {
                 Conectar();
-                cmd = new SqlCommand("INSERT INTO Paciente (Nome,CPF,DataNasciemento,PLANO_DE_SAUDE,Email,Senha,Sexo,Telefone,Cidade,Bairro,Cep,Logradouro,Nro, TpUsuario) VALUES (@Nome,@CPF,@DataNasciemento,@PLANO_DE_SAUDE,@Email,@Senha,@Sexo,@Telefone,@Cidade,@Bairro,@Cep,@Logradouro,@Nro, @TpUsuario);", conn);
+                cmd = new SqlCommand("INSERT INTO Paciente (Nome,CPF,DataNasciemento,PLANO_DE_SAUDE,Email,Senha,Sexo,Telefone,Estado, Endereço,TpUsuario) VALUES (@Nome,@CPF,@DataNasciemento,@Email,@Senha,@Sexo,@Telefone,@Estado,@Endereço,@TpUsuario);", conn);
                 cmd.Parameters.AddWithValue("@Nome", objCad.Nome);
                 cmd.Parameters.AddWithValue("@CPF", objCad.CPF);
                 cmd.Parameters.AddWithValue("@DataNasciemento", objCad.DataNasciemento);
-                cmd.Parameters.AddWithValue("@PLANO_DE_SAUDE", objCad.PLANO_DE_SAUDE);
                 cmd.Parameters.AddWithValue("@Email", objCad.Email);
                 cmd.Parameters.AddWithValue("@Senha", objCad.Senha);
                 cmd.Parameters.AddWithValue("@Sexo", objCad.Sexo);
                 cmd.Parameters.AddWithValue("@Telefone", objCad.Telefone);
-                cmd.Parameters.AddWithValue("@Cidade", objCad.Cidade);
-                cmd.Parameters.AddWithValue("@Bairro", objCad.Bairro);
-                cmd.Parameters.AddWithValue("@Cep", objCad.Cep);
-                cmd.Parameters.AddWithValue("@Logradouro", objCad.Logradouro);
-                cmd.Parameters.AddWithValue("@Nro", objCad.Nro);
+                cmd.Parameters.AddWithValue("@Estado", objCad.Estado);
+                cmd.Parameters.AddWithValue("@Endereço", objCad.Endereço);
                 cmd.Parameters.AddWithValue("@TpUsuario", objCad.TpUsuario);
                 cmd.ExecuteNonQuery();
             }
@@ -85,7 +81,7 @@ namespace RisoOdonto.DAL
             try
             {
                 Conectar();
-                cmd = new SqlCommand("SELECT IdPaciente,Nome,CPF,DataNasciemento,PLANO_DE_SAUDE,Email,Senha,Sexo,Telefone,Cidade,Bairro,Cep,Logradouro,Nro,DescricaoTipoUsuario  FROM Paciente INNER JOIN TipoUsuario ON IdTipoUsuario = TpUsuario ORDER BY IdPaciente ASC;", conn);
+                cmd = new SqlCommand("SELECT IdPaciente,Nome,CPF,DataNasciemento,Email,Senha,Sexo,Telefone,Estado,Endereço,DescricaoTipoUsuario  FROM Paciente INNER JOIN TipoUsuario ON IdTipoUsuario = TpUsuario ORDER BY IdPaciente ASC;", conn);
                 dr = cmd.ExecuteReader();
                 List<UsuarioDTO> lista = new List<UsuarioDTO>();
                 while (dr.Read())
@@ -95,16 +91,12 @@ namespace RisoOdonto.DAL
                     obj.Nome = dr["Nome"].ToString();
                     obj.CPF = dr["CPF"].ToString();
                     obj.DataNasciemento = Convert.ToDateTime(dr["DataNasciemento"]);
-                    obj.PLANO_DE_SAUDE = dr["PLANO_DE_SAUDE"].ToString();
                     obj.Email = dr["Email"].ToString();
                     obj.Senha = dr["Senha"].ToString();
                     obj.Sexo = dr["Sexo"].ToString();
                     obj.Telefone = Convert.ToInt32(dr["Telefone"]);
-                    obj.Cidade = dr["Cidade"].ToString();
-                    obj.Bairro = dr["Bairro"].ToString();
-                    obj.Cep = Convert.ToInt32(dr["Cep"]);
-                    obj.Logradouro = dr["Logradouro"].ToString();
-                    obj.Nro = Convert.ToInt32(dr["Nro"]);
+                    obj.Estado = dr["Estado"].ToString();
+                    obj.Endereço = dr["Endereço"].ToString();
                     obj.TpUsuario = dr["DescricaoTipoUsuario"].ToString();
                     lista.Add(obj);
                 }
@@ -127,20 +119,16 @@ namespace RisoOdonto.DAL
             try
             {
                 Conectar(); 
-                cmd = new SqlCommand("UPDATE Paciente SET [Nome] = @Nome,[CPF]=@CPF,[DataNasciemento]=@DataNasciemento,[PLANO_DE_SAUDE]=@PLANO_DE_SAUDE,[Email]=@Email,[Senha]=@Senha,[Sexo]=@Sexo,[Telefone]=@Telefone,[Cidade]=@Cidade,[Bairro] = @Bairro,[Cep] = @Cep,[Logradouro] = @Logradouro,[Nro] = @Nro,[TpUsuario] = @TpUsuario WHERE IdPaciente = @id;", conn);
+                cmd = new SqlCommand("UPDATE Paciente SET [Nome] = @Nome,[CPF]=@CPF,[DataNasciemento]=@DataNasciemento,[Email]=@Email,[Senha]=@Senha,[Sexo]=@Sexo,[Telefone]=@Telefone,[Estado]=@Estado,[Endereço] = @Endereço,[TpUsuario] = @TpUsuario WHERE IdPaciente = @id;", conn);
                 cmd.Parameters.AddWithValue("@Nome",objEdita.Nome);
                 cmd.Parameters.AddWithValue("@CPF", objEdita.CPF);
                 cmd.Parameters.AddWithValue("@DataNasciement.o", objEdita.DataNasciemento);
-                cmd.Parameters.AddWithValue("@PLANO_DE_SAUDE", objEdita.PLANO_DE_SAUDE);
                 cmd.Parameters.AddWithValue("@Email", objEdita.Email);
                 cmd.Parameters.AddWithValue("@Senha", objEdita.Senha);
                 cmd.Parameters.AddWithValue("@Sexo", objEdita.Sexo);
                 cmd.Parameters.AddWithValue("@Telefone", objEdita.Telefone);
-                cmd.Parameters.AddWithValue("@Cidade", objEdita.Cidade);
-                cmd.Parameters.AddWithValue("@Bairro", objEdita.Bairro);
-                cmd.Parameters.AddWithValue("@Cep", objEdita.Cep);
-                cmd.Parameters.AddWithValue("@Logradouro", objEdita.Logradouro);
-                cmd.Parameters.AddWithValue("@Nro", objEdita.Nro);
+                cmd.Parameters.AddWithValue("@Estado", objEdita.Estado);
+                cmd.Parameters.AddWithValue("@Endereço", objEdita.Endereço);
                 cmd.Parameters.AddWithValue("@TpUsuario", objEdita.TpUsuario);
                 cmd.ExecuteNonQuery();
             }
