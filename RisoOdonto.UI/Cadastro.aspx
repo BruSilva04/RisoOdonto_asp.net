@@ -32,19 +32,19 @@
         <form id="form1" runat="server">
            <fieldset>
                     <legend><b>Cadastro</b></legend>
-                    <br>
+                    <br><br>
                     <div class="inputBox">
-                        <input type="text" name="nome" id="nome" class="inputUser" required>
+                        <asp:TextBox type="text" name="nome" id="txtNome" class="inputUser" runat="server" required/>
                         <label for="nome" class="labelInput">Nome completo</label>
                     </div>
                     <br><br>
                     <div class="inputBox">
-                        <input type="text" name="email" id="email" class="inputUser" required>
+                        <asp:TextBox type="text" name="email" id="txtEmail" class="inputUser" runat="server" required/>
                         <label for="email" class="labelInput">Email</label>
                     </div>
                     <br><br>
                     <div class="inputBox">
-                        <input type="tel" name="telefone" id="telefone" class="inputUser" required>
+                        <asp:TextBox type="tel" name="telefone" id="txtTelefone" class="inputUser" runat="server" required/>
                         <label for="telefone" class="labelInput">Telefone</label>
                     </div>
                     <p>Sexo:</p>
@@ -61,21 +61,23 @@
                     <input type="date" name="data_nascimento" id="data_nascimento" required>
                     <br><br><br>
                     <div class="inputBox">
-                        <input type="text" name="CPF" id="cpf" class="inputUser" required>
+                        <asp:TextBox type="text" name="cpf" id="txtCpf" class="inputUser" runat="server" required/>
                         <label for="cpf" class="labelInput">CPF</label>
                     </div>
                     <br><br>
                     <div class="inputBox">
-                        <input type="text" name="estado" id="estado" class="inputUser" required>
+                        <asp:TextBox type="text" name="estado" id="txtEstado" class="inputUser" runat="server" required/>
                         <label for="estado" class="labelInput">Estado</label>
                     </div>
                     <br><br>
                     <div class="inputBox">
-                        <input type="text" name="endereco" id="endereco" class="inputUser" required>
+                        <asp:TextBox type="text" name="endereco" id="txtEndereco" class="inputUser" runat="server" required/>
                         <label for="endereco" class="labelInput">Endereço</label>
                     </div>
                     <br><br>
-                    <input type="submit" name="submit" id="submit">
+                     <asp:Button ID="btnCadastrar" runat="server" Text="Cadastrar"  />
+                      <asp:Label ID="lblMessage" runat="server"></asp:Label>
+
                 </fieldset>
         </form>
     </div>                 <!-- footer -->
