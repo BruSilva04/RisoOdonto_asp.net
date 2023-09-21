@@ -32,8 +32,11 @@
 
       <div class="container px-4 container1 mt-3">
         <div class="input-group">
-          <span class="input-group-text">Digite seu Nome:</span>
-          <input type="text" aria-label="First name" class="form-control">
+            <ul>
+                <li>
+                    <input type="text" placeholder="Nome:" class="form-control">
+                </li>
+            </ul>
         </div>
       </div>
        
