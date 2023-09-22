@@ -36,18 +36,25 @@
                     <div class="inputBox">
                         <asp:TextBox type="text" name="nome" id="txtNome" class="inputUser" runat="server" required/>
                         <label for="nome" class="labelInput">Nome completo</label>
+                         <br />
+                        <asp:Label ID="lblNome" runat="server" Text=""></asp:Label>
                     </div>
                     <br><br>
                     <div class="inputBox">
                         <asp:TextBox type="text" name="email" id="txtEmail" class="inputUser" runat="server" required/>
                         <label for="email" class="labelInput">Email</label>
+                          <br />
+                        <asp:Label ID="lblEmail" runat="server" Text=""></asp:Label>
                     </div>
                     <br><br>
                     <div class="inputBox">
                         <asp:TextBox type="tel" name="telefone" id="txtTelefone" class="inputUser" runat="server" required/>
                         <label for="telefone" class="labelInput">Telefone</label>
+                                                   <br />
+                        <asp:Label ID="lblTel" runat="server" Text=""></asp:Label>
                     </div>
                     <p>Sexo:</p>
+              <%-- <asp:TextBox type="tel" name="telefone" id="TextBox1" class="inputUser" runat="server" required/>--%>
                     <input type="radio" id="feminino" name="genero" value="feminino" required>
                     <label for="feminino">Feminino</label>
                     <br>
@@ -56,23 +63,40 @@
                     <br>
                     <input type="radio" id="outro" name="genero" value="outro" required>
                     <label for="outro">Outro</label>
+                                          <br />
+                        <asp:Label ID="lblSexo" runat="server" Text=""></asp:Label>
                     <br><br>
                     <label for="data_nascimento"><b>Data de Nascimento:</b></label>
-                    <input type="date" name="data_nascimento" id="data_nascimento" required>
-                    <br><br><br>
+                    <asp:TextBox type="date" ID="txtData" runat="server" placeholder="Data de Nascimento:" AutoCompleteType="Disabled" onkeypress="$(this).mask('00/00/0000')" required></asp:TextBox>
+                                          <br />
+                        <asp:Label ID="lblData" runat="server" Text=""></asp:Label>
+                    <br><br>
                     <div class="inputBox">
                         <asp:TextBox type="text" name="cpf" id="txtCpf" class="inputUser" runat="server" required/>
                         <label for="cpf" class="labelInput">CPF</label>
+                                                   <br />
+                        <asp:Label ID="lblCpf" runat="server" Text=""></asp:Label>
                     </div>
                     <br><br>
                     <div class="inputBox">
                         <asp:TextBox type="text" name="estado" id="txtEstado" class="inputUser" runat="server" required/>
                         <label for="estado" class="labelInput">Estado</label>
+                                                   <br />
+                        <asp:Label ID="lblEstado" runat="server" Text=""></asp:Label>
                     </div>
                     <br><br>
                     <div class="inputBox">
                         <asp:TextBox type="text" name="endereco" id="txtEndereco" class="inputUser" runat="server" required/>
                         <label for="endereco" class="labelInput">Endereço</label>
+                                                   <br />
+                        <asp:Label ID="lblEndereco" runat="server" Text=""></asp:Label>
+                    </div>
+               <br><br>
+               <div class="inputBox">
+                        <asp:TextBox type="password" name="senha" id="txtSenha" class="inputUser" runat="server" required/>
+                        <label for="senha" class="labelInput">Senha</label>
+                                                   <br />
+                        <asp:Label ID="lblSenha" runat="server" Text=""></asp:Label>
                     </div>
                     <br><br>
                      <asp:Button ID="btnCadastrar" runat="server" Text="Cadastrar"  />
