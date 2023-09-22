@@ -43,8 +43,8 @@
         </div>
         <br><br>
         <div class="inputBox">
-        <asp:TextBox type="text" name="senha" id="txtSenha" class="inputUser" runat="server" required/>
-        <label for="senha" class="labelInput">Senha</label>
+        <asp:TextBox type="password" name="senha" id="txtSenha" class="inputUser" runat="server" required/>
+        <label for="txtSenha" class="labelInput">Senha</label>
         </div>
         <br><br>
         <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
