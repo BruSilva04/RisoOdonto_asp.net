@@ -17,7 +17,7 @@ namespace RisoOdonto.UI
         //limpar labels de validacao
         private void NewMethod()
         {
-            lblNome.Text = lblSenha.Text = lblEmail.Text = lblData.Text = lblCpf.Text = lblEndereco.Text = lblEstado.Text = lblTel.Text = lblSenha.Text = string.Empty;
+            lblNome.Text = lblSenha.Text = lblEmail.Text  = lblCpf.Text = lblEndereco.Text = lblEstado.Text = lblTel.Text = lblSenha.Text = string.Empty;
         }
 
         //validaPage
@@ -62,14 +62,6 @@ namespace RisoOdonto.UI
                 NewMethod();
                 lblSenha.Text = "Digite a senha do usuário !!";
                 txtSenha.Focus();
-                validator = false;
-            }
-            
-            else if (string.IsNullOrEmpty(txtData.Text))
-            {
-                NewMethod();
-                lblData.Text = "Digite a data de nascimento do usuário !!";
-                txtData.Focus();
                 validator = false;
             }
             else
