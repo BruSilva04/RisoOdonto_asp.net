@@ -72,6 +72,7 @@
     <Content Include="Login.aspx" />
     <Content Include="src\css\Cadastro.css" />
     <Content Include="src\css\style.css" />
+    <Content Include="src\js\index.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -120,7 +121,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="adm\" />
-    <Folder Include="src\js\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RisoOdonto.BLL\RisoOdonto.BLL.csproj">
