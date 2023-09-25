@@ -78,31 +78,31 @@ namespace RisoOdonto.UI
         protected global::System.Web.UI.WebControls.Label lblTel;
 
         /// <summary>
-        /// Controle CheckBox1.
+        /// Controle tbox1.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox1;
+        protected global::System.Web.UI.WebControls.CheckBox tbox1;
 
         /// <summary>
-        /// Controle CheckBox2.
+        /// Controle tbox2.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox2;
+        protected global::System.Web.UI.WebControls.CheckBox tbox2;
 
         /// <summary>
-        /// Controle CheckBox3.
+        /// Controle tbox3.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox3;
+        protected global::System.Web.UI.WebControls.CheckBox tbox3;
 
         /// <summary>
         /// Controle lblSexo.

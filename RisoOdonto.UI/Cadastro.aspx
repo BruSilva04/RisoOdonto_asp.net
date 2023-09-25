@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Faça seu Cadastro</title>
 </head>
-<body class="principal" >
+<body >
           
     <!-- endregion -->
     <div class="box">
@@ -38,17 +38,18 @@
                     </div>
                         <br>
                     <p>Sexo:</p>
-                     <asp:CheckBox ID="CheckBox1" runat="server"  required/>
+
+                     <asp:CheckBox ID="tbox1" runat="server"  required/>
                     <label for="feminino">Feminino</label>
                     <br>
-                     <asp:CheckBox ID="CheckBox2" runat="server" required/>
+                     <asp:CheckBox ID="tbox2" runat="server"  required/>
                     <label for="masculino">Masculino</label>
                     <br>
-                     <asp:CheckBox ID="CheckBox3" runat="server" required/>
+                     <asp:CheckBox ID="tbox3" runat="server"  required/>
                     <label for="outro">Outro</label>
                                           <br />
                         <asp:Label ID="lblSexo" runat="server" Text=""></asp:Label>
-                    <br>
+                  <br>
                     <label for="data_nascimento"><b>Data de Nascimento:</b></label>
                     <asp:TextBox type="date" ID="txtData" runat="server" placeholder="Data de Nascimento:" AutoCompleteType="Disabled" onkeypress="$(this).mask('00/00/0000')" required></asp:TextBox>
                                           <br />
@@ -92,6 +93,10 @@
 
     <%--scripts--%>
 
-
+     <%--jquery--%>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <%--jqueryMask--%>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="src/js/index.js"></script>
 </body>
 </html>

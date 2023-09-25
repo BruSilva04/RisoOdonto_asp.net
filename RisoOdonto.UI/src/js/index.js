@@ -1,1 +1,1 @@
-    $('#checkbox').prop('checked', true);
+$('.box').prop('checked', true);

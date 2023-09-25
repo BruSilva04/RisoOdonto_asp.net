@@ -8,12 +8,12 @@
 
 @font-face {
     font-family: 'Roboto-Light';
-    src: url(../../Cadastro.aspx);
+    src:url('../font/Roboto-Light.ttf');
 }
 
 
 body {
-    background-image: linear-gradient(to right, #8538eb, #6f2ec8, #5923a7, #451a86, #321067);
+    background-image: linear-gradient(to right, rgba(130, 56, 228, 0.74), rgb(31, 17, 71));
 }
 
 
