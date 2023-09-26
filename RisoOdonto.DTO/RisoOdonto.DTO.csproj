@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgendamentoDTO.cs" />
     <Compile Include="FuncionarioDTO.cs" />
     <Compile Include="TipoUsuarioDTO.cs" />
     <Compile Include="UsuarioDTO.cs" />
