@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgendamentoDAL.cs" />
     <Compile Include="Conexao.cs" />
     <Compile Include="FuncionarioDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
