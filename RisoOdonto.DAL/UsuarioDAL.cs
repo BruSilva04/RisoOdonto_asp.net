@@ -51,16 +51,15 @@ namespace RisoOdonto.DAL
             try
             {
                 Conectar();
-                cmd = new SqlCommand("INSERT INTO Paciente (Nome,CPF,DataNasciemento,PLANO_DE_SAUDE,Email,Senha,Sexo,Telefone,Estado, Endereço,TpUsuario) VALUES (@Nome,@CPF,@DataNasciemento,@Email,@Senha,@Sexo,@Telefone,@Estado,@Endereço,@TpUsuario);", conn);
+                cmd = new SqlCommand("INSERT INTO Paciente (Nome,Email, Telefone, DataNasciemento, CPF,Estado, Endereço,Senha,TpUsuario) VALUES (@Nome,@CPF,@DataNasciemento,@Email,@Senha,@Telefone,@Estado,@Endereço,@TpUsuario);", conn);
                 cmd.Parameters.AddWithValue("@Nome", objCad.Nome);
-                cmd.Parameters.AddWithValue("@CPF", objCad.CPF);
-                cmd.Parameters.AddWithValue("@DataNasciemento", objCad.DataNasciemento);
                 cmd.Parameters.AddWithValue("@Email", objCad.Email);
-                cmd.Parameters.AddWithValue("@Senha", objCad.Senha);
-                cmd.Parameters.AddWithValue("@Sexo", objCad.Sexo);
                 cmd.Parameters.AddWithValue("@Telefone", objCad.Telefone);
+                cmd.Parameters.AddWithValue("@DataNasciemento", objCad.DataNasciemento);
+                cmd.Parameters.AddWithValue("@CPF", objCad.CPF);
                 cmd.Parameters.AddWithValue("@Estado", objCad.Estado);
                 cmd.Parameters.AddWithValue("@Endereço", objCad.Endereço);
+                cmd.Parameters.AddWithValue("@Senha", objCad.Senha);
                 cmd.Parameters.AddWithValue("@TpUsuario", objCad.TpUsuario);
                 cmd.ExecuteNonQuery();
             }
@@ -81,7 +80,7 @@ namespace RisoOdonto.DAL
             try
             {
                 Conectar();
-                cmd = new SqlCommand("SELECT IdPaciente,Nome,CPF,DataNasciemento,Email,Senha,Sexo,Telefone,Estado,Endereço,DescricaoTipoUsuario  FROM Paciente INNER JOIN TipoUsuario ON IdTipoUsuario = TpUsuario ORDER BY IdPaciente ASC;", conn);
+                cmd = new SqlCommand("SELECT IdPaciente,Nome,CPF,DataNasciemento,Email,Senha,Telefone,Estado,Endereço,DescricaoTipoUsuario  FROM Paciente INNER JOIN TipoUsuario ON IdTipoUsuario = TpUsuario ORDER BY IdPaciente ASC;", conn);
                 dr = cmd.ExecuteReader();
                 List<UsuarioDTO> lista = new List<UsuarioDTO>();
                 while (dr.Read())
@@ -93,7 +92,6 @@ namespace RisoOdonto.DAL
                     obj.DataNasciemento = Convert.ToDateTime(dr["DataNasciemento"]);
                     obj.Email = dr["Email"].ToString();
                     obj.Senha = dr["Senha"].ToString();
-                    obj.Sexo = dr["Sexo"].ToString();
                     obj.Telefone = Convert.ToInt32(dr["Telefone"]);
                     obj.Estado = dr["Estado"].ToString();
                     obj.Endereço = dr["Endereço"].ToString();
@@ -119,16 +117,15 @@ namespace RisoOdonto.DAL
             try
             {
                 Conectar(); 
-                cmd = new SqlCommand("UPDATE Paciente SET [Nome] = @Nome,[CPF]=@CPF,[DataNasciemento]=@DataNasciemento,[Email]=@Email,[Senha]=@Senha,[Sexo]=@Sexo,[Telefone]=@Telefone,[Estado]=@Estado,[Endereço] = @Endereço,[TpUsuario] = @TpUsuario WHERE IdPaciente = @id;", conn);
-                cmd.Parameters.AddWithValue("@Nome",objEdita.Nome);
-                cmd.Parameters.AddWithValue("@CPF", objEdita.CPF);
-                cmd.Parameters.AddWithValue("@DataNasciement.o", objEdita.DataNasciemento);
+                cmd = new SqlCommand("UPDATE Paciente SET [Nome] = @Nome,[CPF]=@CPF,[DataNasciemento]=@DataNasciemento,[Email]=@Email,[Senha]=@Senha,[Telefone]=@Telefone,[Estado]=@Estado,[Endereço] = @Endereço,[TpUsuario] = @TpUsuario WHERE IdPaciente = @id;", conn);
+                cmd.Parameters.AddWithValue("@Nome", objEdita.Nome);
                 cmd.Parameters.AddWithValue("@Email", objEdita.Email);
-                cmd.Parameters.AddWithValue("@Senha", objEdita.Senha);
-                cmd.Parameters.AddWithValue("@Sexo", objEdita.Sexo);
                 cmd.Parameters.AddWithValue("@Telefone", objEdita.Telefone);
+                cmd.Parameters.AddWithValue("@DataNasciemento", objEdita.DataNasciemento);
+                cmd.Parameters.AddWithValue("@CPF", objEdita.CPF);
                 cmd.Parameters.AddWithValue("@Estado", objEdita.Estado);
                 cmd.Parameters.AddWithValue("@Endereço", objEdita.Endereço);
+                cmd.Parameters.AddWithValue("@Senha", objEdita.Senha);
                 cmd.Parameters.AddWithValue("@TpUsuario", objEdita.TpUsuario);
                 cmd.ExecuteNonQuery();
             }

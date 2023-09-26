@@ -78,40 +78,13 @@ namespace RisoOdonto.UI
         protected global::System.Web.UI.WebControls.Label lblTel;
 
         /// <summary>
-        /// Controle tbox1.
+        /// Controle lblData.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox tbox1;
-
-        /// <summary>
-        /// Controle tbox2.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox tbox2;
-
-        /// <summary>
-        /// Controle tbox3.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox tbox3;
-
-        /// <summary>
-        /// Controle lblSexo.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSexo;
+        protected global::System.Web.UI.WebControls.Label lblData;
 
         /// <summary>
         /// Controle txtData.
@@ -193,6 +166,15 @@ namespace RisoOdonto.UI
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblSenha;
+
+        /// <summary>
+        /// Controle ddl1.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddl1;
 
         /// <summary>
         /// Controle btnCadastrar.

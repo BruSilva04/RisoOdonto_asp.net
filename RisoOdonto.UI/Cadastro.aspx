@@ -30,45 +30,43 @@
                         <asp:TextBox type="tel" name="telefone" id="txtTelefone" class="inputUser" runat="server" required/>
                         <asp:Label ID="lblTel" runat="server" class="labelInput">Telefone</asp:Label>
                     </div>
-                        <br>
-                    <p>Sexo:</p>
-
-                     <asp:CheckBox ID="tbox1" runat="server"  required/>
-                    <label for="feminino">Feminino</label>
-                    <br>
-                     <asp:CheckBox ID="tbox2" runat="server"  required/>
-                    <label for="masculino">Masculino</label>
-                    <br>
-                     <asp:CheckBox ID="tbox3" runat="server"  required/>
-                    <label for="outro">Outro</label>
-                                          <br />
-                        <asp:Label ID="lblSexo" runat="server" Text=""></asp:Label>
-                  <br>
-                    <label for="data_nascimento" runat="server"><b>Data de Nascimento:</b></label>
+                        <br><br>
+                        <asp:Label ID="lblData"  runat="server" ><b>Data de Nascimento:</b></asp:Label>
                     <asp:TextBox type="date" ID="txtData" runat="server" placeholder="Data de Nascimento:" AutoCompleteType="Disabled" onkeypress="$(this).mask('00/00/0000')" required></asp:TextBox>
                     <br><br>
                     <div class="inputBox">
-                        <asp:TextBox type="text" name="cpf" id="txtCpf"  runat="server" required/>
-                        <asp:Label ID="lblCpf" runat="server" class="inputUser">CPF</asp:Label>
+                        <asp:TextBox type="text" name="cpf" id="txtCpf" class="inputUser" runat="server" required/>
+                        <asp:Label ID="lblCpf" runat="server" class="labelInput">CPF</asp:Label>
                     </div>
                     <br><br>
                     <div class="inputBox">
                         <asp:TextBox type="text" name="estado" id="txtEstado" class="inputUser" runat="server" required/>
-                        <asp:Label ID="lblEstado" runat="server" class="inputUser">Estado</asp:Label>
+                        <asp:Label ID="lblEstado" runat="server" class="labelInput">Estado</asp:Label>
                     </div>
                     <br><br>
                     <div class="inputBox">
                         <asp:TextBox type="text" name="endereco" id="txtEndereco" class="inputUser" runat="server" required/>
-                        <asp:Label ID="lblEndereco" runat="server" class="inputUser">Endereço</asp:Label>
+                        <asp:Label ID="lblEndereco" runat="server" class="labelInput">Endereço</asp:Label>
                     </div>
                <br><br>
                <div class="inputBox">
                         <asp:TextBox type="password" name="senha" id="txtSenha" class="inputUser" runat="server" required/>
-                        <asp:Label ID="lblSenha" runat="server" class="inputUser">Senha</asp:Label>
+                        <asp:Label ID="lblSenha" runat="server" class="labelInput">Senha</asp:Label>
                     </div>
                     <br><br>
-                     <asp:Button ID="btnCadastrar" runat="server" Text="Cadastrar"  />
+                     <div class="inputBox">
+                            <asp:DropDownList
+                            ID="ddl1"
+                            runat="server"
+                            AutoPostBack="false"
+                            DataValueField="IdTipoUsuario"
+                            DataTextField="DescricaoTipoUsuario">
+                        </asp:DropDownList>
+                    </div>
+               <br><br>
+                     <asp:Button ID="btnCadastrar" runat="server" Text="Cadastrar" onClick="btnCadastrar_Click" />
                       <asp:Label ID="lblMessage" runat="server"></asp:Label>
+
 
                 </fieldset>
         </form>

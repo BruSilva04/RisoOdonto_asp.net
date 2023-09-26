@@ -13,7 +13,7 @@ CREATE TABLE TipoUsuario
 );
 
 INSERT INTO TipoUsuario VALUES ('Administrador'),('Outros');
-SELECT * FROM TipoUsuario;
+SELECT * FROM Paciente;
 
 
  
@@ -25,7 +25,6 @@ Nome VARCHAR (50) NOT NULL,
 DataNasciemento DATE NOT NULL,
 Email VARCHAR (20) NOT NULL,
 Senha VARCHAR (20) NOT NULL,
-Sexo VARCHAR (10),
 Telefone INT NOT NULL,
 CPF VARCHAR (14) NOT NULL,
 Estado VARCHAR (20) NOT NULL,
@@ -37,6 +36,9 @@ TpUsuario INT NOT NULL,
 
 )
 
+
+INSERT INTO Paciente (Nome, DataNasciemento, Email, Senha, Telefone, CPF, Estado, Endereço, TpUsuario)
+VALUES ('Kelvin', '1999-07-19', 'k.bryan924@gmail.com', '021819', 1198531-1185, '47572436854', 'São Paulo', 'Rua Alvarens', 2)
  
 
 CREATE TABLE Dentista
