@@ -51,7 +51,7 @@ namespace RisoOdonto.DAL
             try
             {
                 Conectar();
-                cmd = new SqlCommand("INSERT INTO Paciente (Nome,Email, Telefone, DataNasciemento, CPF,Estado, Endereço,Senha,TpUsuario) VALUES (@Nome,@CPF,@DataNasciemento,@Email,@Senha,@Telefone,@Estado,@Endereço,@TpUsuario);", conn);
+                cmd = new SqlCommand("INSERT INTO Paciente (Nome,Email, Telefone, DataNasciemento, CPF,Estado, Endereço,Senha,TpUsuario) VALUES (@Nome,@Email,@Telefone,@DataNasciemento,@CPF,@Estado,@Endereço,@Senha,@TpUsuario);", conn);
                 cmd.Parameters.AddWithValue("@Nome", objCad.Nome);
                 cmd.Parameters.AddWithValue("@Email", objCad.Email);
                 cmd.Parameters.AddWithValue("@Telefone", objCad.Telefone);
@@ -88,13 +88,13 @@ namespace RisoOdonto.DAL
                     UsuarioDTO obj = new UsuarioDTO();
                     obj.IdPaciente = Convert.ToInt32(dr["IdPaciente"]);
                     obj.Nome = dr["Nome"].ToString();
-                    obj.CPF = dr["CPF"].ToString();
-                    obj.DataNasciemento = Convert.ToDateTime(dr["DataNasciemento"]);
                     obj.Email = dr["Email"].ToString();
-                    obj.Senha = dr["Senha"].ToString();
                     obj.Telefone = Convert.ToInt32(dr["Telefone"]);
+                    obj.DataNasciemento = Convert.ToDateTime(dr["DataNasciemento"]);
+                    obj.CPF = dr["CPF"].ToString();
                     obj.Estado = dr["Estado"].ToString();
                     obj.Endereço = dr["Endereço"].ToString();
+                    obj.Senha = dr["Senha"].ToString();
                     obj.TpUsuario = dr["DescricaoTipoUsuario"].ToString();
                     lista.Add(obj);
                 }

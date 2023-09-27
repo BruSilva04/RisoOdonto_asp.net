@@ -13,7 +13,7 @@ namespace RisoOdonto.UI
     public partial class Cadastro : System.Web.UI.Page
     {
         //instanciar os objetos DTO BLL
-        UsuarioDTO usuario = new UsuarioDTO();
+        UsuarioDTO Usuario = new UsuarioDTO();
         UsuarioBLL objBLL = new UsuarioBLL();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -68,7 +68,7 @@ namespace RisoOdonto.UI
             {
                 NewMethod();
                 lblData.Text = "Digite sua Data !!";
-                txtTelefone.Focus();
+                txtData.Focus();
                 validator = false;
             }
             else if (string.IsNullOrEmpty(txtCpf.Text))
@@ -112,43 +112,55 @@ namespace RisoOdonto.UI
 
         protected void btnCadastrar_Click(object sender, EventArgs e)
         {
-                if (ValidaPage())
-                {
+            if (ValidaPage())
+            {
 
-                    //preenchendo dados
-                    usuario = new UsuarioDTO();
-                    usuario.Nome = txtNome.Text.Trim();
-                    usuario.Email = txtEmail.Text.Trim();
-                    usuario.Telefone = Convert.ToInt32(txtTelefone.Text.Trim());
-                    //ajustar a data
-                    DateTime dt;
-                    if (DateTime.TryParse(txtData.Text, out dt))
-                    {
-                        usuario.DataNasciemento = dt;
-                    }
-                    else
-                    {
-                        lblData.Text = $"Data inválida !!";
-                        txtData.Text = string.Empty;
-                        txtData.Focus();
-                        return;
-                    }
-                    usuario.CPF = txtCpf.Text.Trim();
-                    usuario.Estado = txtEstado.Text.Trim();
-                    usuario.Endereço = txtEndereco.Text.Trim();
-                    usuario.Senha = txtSenha.Text.Trim();
-                    
-                    //ddl
-                    usuario.TpUsuario = ddl1.SelectedValue;
+                //preenchendo dados
+             UsuarioDTO usuario = new UsuarioDTO();
+             usuario.Nome = txtNome.Text.Trim();
+             usuario.Email = txtEmail.Text.Trim();
+             usuario.Telefone = Convert.ToInt32(txtTelefone.Text);
+              //ajustar a data
+               //int tel;
+               //if (int.TryParse(txtTelefone.Text, out tel))
+               //{
+               //    usuario.Telefone = tel;
+               //}
+               //else
+               //{
+               //    lblTel.Text = $"telefone inválida !!";
+               //    txtTelefone.Text = string.Empty;
+               //    txtTelefone.Focus();
+               //    return;
+               //}
+                //ajustar a data
+                DateTime dt;
+              if (DateTime.TryParse(txtData.Text, out dt))
+              {
+                  usuario.DataNasciemento = dt;
+              }
+              else
+              {
+                  lblData.Text = $"Data inválida !!";
+                  txtData.Text = string.Empty;
+                  txtData.Focus();
+                  return;
+              }
+              usuario.CPF = txtCpf.Text.Trim();
+              usuario.Estado = txtEstado.Text.Trim();
+              usuario.Endereço = txtEndereco.Text.Trim();
+              usuario.Senha = txtSenha.Text.Trim();
 
+              //ddl
+              usuario.TpUsuario = ddl1.SelectedValue;
 
-                        //cadastrar
-                        objBLL.Cadastrar(usuario);
-                        Limpar.ClearControl(this);
-                        btnCadastrar.Enabled = true;
-                        lblMessage.Text = $"Usuário {usuario.Nome} cadastrado com sucesso !!";
+              //cadastrar
+              objBLL.Cadastrar(usuario);
+              Limpar.ClearControl(this);
+              btnCadastrar.Enabled = true;
+              lblMessage.Text = $"Usuário {usuario.Nome} cadastrado com sucesso !!";
 
-                }
-            }
-    }
+             }
+          }
+     }
 }

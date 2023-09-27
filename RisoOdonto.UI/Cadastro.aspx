@@ -22,12 +22,12 @@
                     </div>
                     <br><br>
                     <div class="inputBox">
-                        <asp:TextBox type="text" name="email" id="txtEmail" class="inputUser" runat="server" required/>
+                        <asp:TextBox type="text"  id="txtEmail" class="inputUser" runat="server" required/>
                         <asp:Label ID="lblEmail" runat="server" class="labelInput">E-mail</asp:Label>
                     </div>
                     <br><br>
                     <div class="inputBox">
-                        <asp:TextBox type="tel" name="telefone" id="txtTelefone" class="inputUser" runat="server" required/>
+                        <asp:TextBox type="text" id="txtTelefone" class="inputUser" runat="server" AutoCompleteType="Disabled" onkeypress="$(this).mask('(99) 99999-9999')" required/>
                         <asp:Label ID="lblTel" runat="server" class="labelInput">Telefone</asp:Label>
                     </div>
                         <br><br>
